@@ -2,15 +2,17 @@
 
 ## From fugue to drawing
 
-This project turns music into a generative drawing. I chose J. S. Bach’s *Contrapunctus VIII* from *The Art of Fugue* (BWV 1080), a triple fugue in three voices. What drew me to the piece was the way each voice has a melodic line I can follow on its own, while the three voices come together in unexpected but coherent ways. Bach introduces three distinct subjects, passes them between voices and eventually brings them together. I wanted to see whether a drawing could do something similar. Each voice would have its own image, and layering the three images would reveal relationships that are only visible when they are seen together.
+In simple terms, this project turns music into a generative drawing. I chose J. S. Bach’s *Contrapunctus VIII* from *The Art of Fugue* (BWV 1080), a triple fugue in three voices. What drew me to the piece was the way each voice has a melodic line I can follow on its own, while the three voices come together in unexpected but coherent ways. Bach introduces three distinct subjects, passes them between voices and eventually brings them together. I wanted to see whether a drawing could do something similar. Each voice would have its own image, and layering the three images would reveal relationships that are only visible when they are seen together.
 
 ## From note data to line
 
 I started with the score and used a MIDI version to work with the notes as data. In Python, I used `pretty_midi` to read each voice separately and extract the pitch, start time and end time of each note. I then used `py5canvas` to draw all three voices against the same circular timeline. The piece begins at twelve o’clock, and time moves clockwise through one full turn.
 
-A `for` loop goes through the notes in each voice and draws one straight line for every note. Each line joins two points, one on each of two radial patterns. The note’s start and end times set the angles of the two endpoints, so its duration determines the angular distance between them. Pitch controls how far the endpoints can move in or out from a base radius. I used sine and cosine waves with different frequencies to give the two radial patterns different contours.
+The key rule in my drawing is how pitch shapes the radial pattern. In the Voice 1 script, `amplitude = 45 + (note.pitch - 60) * 2` sets the amplitude to 45 at middle C (MIDI note 60) and increases it by 2 for each semitone above that reference, or decreases it by 2 for each semitone below it. The code uses this value to scale a sine wave and a cosine wave with different frequencies. The two waves determine how far each endpoint sits inside or outside a base radius of 300 pixels.
 
-Blue, orange and green distinguish the three voices. On each layer, gaps in the sequence of line starts show where that voice has fewer or no new note attacks. A note that is already sounding can still extend through that part of the timeline. Because the three drawings use the same time scale, a sparse passage in one voice can line up with activity in another when the layers are brought together.
+The program repeats this calculation for each MIDI note and joins the two endpoints with a straight line. On the shared clockwise timeline, the note’s start and end times set the angles of the two endpoints. The time between them determines their angular separation, while the visible length of the line depends on both the angles and the two radii.
+
+Blue, orange and green distinguish the three voices. On each layer, gaps in the sequence of line starts show where that voice has fewer or no new note attacks. A note that is already sounding can still extend through that part of the timeline. Because the three drawings use the same time scale, a sparse passage in one voice can line up with activity in another when the layers are brought together. The open centre comes mainly from my decision to place the lines around a ring.
 
 ## Physical presentation
 
