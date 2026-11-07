@@ -8,7 +8,12 @@ In simple terms, this project turns music into a generative drawing. I chose J. 
 
 I started with the score and used a MIDI version to work with the notes as data. In Python, I used `pretty_midi` to read each voice separately and extract the pitch, start time and end time of each note. I then used `py5canvas` to draw all three voices against the same circular timeline. The piece begins at twelve o’clock, and time moves clockwise through one full turn.
 
-The key rule in my drawing is how pitch shapes the radial pattern. In the Voice 1 script, `amplitude = 45 + (note.pitch - 60) * 2` sets the amplitude to 45 at middle C (MIDI note 60) and increases it by 2 for each semitone above that reference, or decreases it by 2 for each semitone below it. The code uses this value to scale a sine wave and a cosine wave with different frequencies. The two waves determine how far each endpoint sits inside or outside a base radius of 300 pixels.
+The key rule in my drawing is how pitch shapes the radial pattern. In the Voice 1 script, each note’s pitch controls how far the endpoints of its line can move away from the base circle. I calculate the amplitude using this rule:
+
+```python
+amplitude = 45 + (note.pitch - 60) * 2
+```
+Middle C (MIDI note 60) gives an amplitude of 45. Each semitone above middle C adds 2, and each semitone below it subtracts 2. I use this amplitude to scale a sine wave and a cosine wave with different frequencies. The two waves determine how far each endpoint sits inside or outside the 300-pixel base radius.
 
 The program repeats this calculation for each MIDI note and joins the two endpoints with a straight line. On the shared clockwise timeline, the note’s start and end times set the angles of the two endpoints. The time between them determines their angular separation, while the visible length of the line depends on both the angles and the two radii.
 
