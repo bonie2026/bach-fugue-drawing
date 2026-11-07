@@ -6,7 +6,6 @@ from py5canvas import *
 midi_path = Path(__file__).resolve().parent / "kunst_der_fuge_08_(c)simonetto.mid"
 midi = pretty_midi.PrettyMIDI(str(midi_path))
 
-# All voices use the duration of the whole piece.
 total_time = midi.get_end_time()
 
 def setup():
@@ -16,7 +15,6 @@ def draw():
     background(250)
     stroke_weight(0.5)
 
-    # Draw all three voices on the same canvas.
     for voice in range(3):
         notes = midi.instruments[voice].notes
 
@@ -29,7 +27,6 @@ def draw():
 
         for note in notes:
 
-            # Start at twelve o'clock; time moves clockwise.
             angle = note.start / total_time * 360 - 90
             angle2 = note.end / total_time * 360 - 90
 
