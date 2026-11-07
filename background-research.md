@@ -82,7 +82,6 @@ I was drawn to the way thin lines gather into denser areas and then open up agai
 
 ### Eduardo Mac Entyre · Generative painting
 
-![Eduardo Mac Entyre’s red-ground painting with overlapping coloured loops]
-<img src="https://www.retroavangarda.com/wp-content/uploads/2020/11/08-Mac-Entyre.jpg" alt="Eduardo Mac Entyre’s red-ground painting with overlapping coloured loops" width="380">
+![Eduardo Mac Entyre’s red-ground painting with overlapping coloured loops](https://www.retroavangarda.com/wp-content/uploads/2020/11/08-Mac-Entyre.jpg)
 
 The coloured loops in this painting remain visible individually even where they gather into a brighter, more complex centre. I initially explored screen printing and Risograph printing because overlapping inks can change how colours are perceived. For the installation, I use three separate tracing-paper sheets. From the front, the layers register into one image. Moving sideways shifts their apparent alignment, giving the viewer a chance to follow one voice and then see how it fits back into the whole. [Image and historical context, Anna Kłos, *Generative Art in Argentina*, Retroavangarda](https://www.retroavangarda.com/generative-art-in-argentina/)
