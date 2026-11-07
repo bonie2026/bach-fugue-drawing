@@ -2,7 +2,7 @@
 
 ## From fugue to drawing
 
-In simple terms, this project turns music into a generative drawing. I chose J. S. Bach’s *Contrapunctus VIII* from *The Art of Fugue* (BWV 1080), a triple fugue in three voices. What drew me to the piece was the way each voice has a melodic line I can follow on its own, while the three voices come together in unexpected but coherent ways. Bach introduces three distinct subjects, passes them between voices and eventually brings them together. I wanted to see whether a drawing could do something similar. Each voice would have its own image, and layering the three images would reveal relationships that are only visible when they are seen together.
+This project turns music into a generative drawing. I chose J. S. Bach’s *Contrapunctus VIII* from *The Art of Fugue* (BWV 1080), a triple fugue in three voices. What drew me to the piece was the way each voice has a melodic line I can follow on its own, while the three voices come together in unexpected but coherent ways. Bach introduces three distinct subjects, passes them between voices and eventually brings them together. I wanted to see whether a drawing could do something similar. Each voice would have its own image, and layering the three images would reveal relationships that are only visible when they are seen together.
 
 ## From note data to line
 
