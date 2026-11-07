@@ -7,7 +7,6 @@ midi_path = Path(__file__).resolve().parent / "kunst_der_fuge_08_(c)simonetto.mi
 midi = pretty_midi.PrettyMIDI(str(midi_path))
 notes = midi.instruments[1].notes
 
-# All voices use the duration of the whole piece.
 total_time = midi.get_end_time()
 
 def setup():
@@ -20,7 +19,6 @@ def draw():
 
     for note in notes:
 
-        # Start at twelve o'clock; time moves clockwise.
         angle = note.start / total_time * 360 - 90
         angle2 = note.end / total_time * 360 - 90
 
