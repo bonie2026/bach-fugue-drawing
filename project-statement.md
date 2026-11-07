@@ -8,14 +8,28 @@ In simple terms, this project turns music into a generative drawing. I chose J. 
 
 I started with the score and used a MIDI version to work with the notes as data. In Python, I used `pretty_midi` to read each voice separately and extract the pitch, start time and end time of each note. I then used `py5canvas` to draw all three voices against the same circular timeline. The piece begins at twelve o’clock, and time moves clockwise through one full turn.
 
-The key rule in my drawing is how pitch shapes the radial pattern. In the Voice 1 script, each note’s pitch controls how far the endpoints of its line can move away from the base circle. I calculate the amplitude using this rule:
+The three voices share the duration of the full MIDI file. In [the Voice 1 script](bach_v7_voice_1.py), I divide each note’s start and end times by that duration to place its two endpoints on the same circular timeline.
+
+```python
+total_time = midi.get_end_time()
+```
+
+```python
+angle = note.start / total_time * 360 - 90
+angle2 = note.end / total_time * 360 - 90
+```
+
+The −90° offset places the start of the piece at twelve o’clock. Notes that start at the same time share a starting angle across all three layers.
+
+Pitch controls how far the endpoints can move from the base circle. In Voice 1, middle C (MIDI note 60) gives an amplitude of 45 pixels, with a change of 2 pixels per semitone. I use the note’s starting angle in both wave calculations. The sine and cosine terms move the endpoints inside or outside the 300-pixel base radius at different rates around the circle.
 
 ```python
 amplitude = 45 + (note.pitch - 60) * 2
+radius1 = 300 + amplitude * sin(radians(angle * 6))
+radius2 = 300 + amplitude * cos(radians(angle * 10))
 ```
-Middle C (MIDI note 60) gives an amplitude of 45. Each semitone above middle C adds 2, and each semitone below it subtracts 2. I use this amplitude to scale a sine wave and a cosine wave with different frequencies. The two waves determine how far each endpoint sits inside or outside the 300-pixel base radius.
 
-The program repeats this calculation for each MIDI note and joins the two endpoints with a straight line. On the shared clockwise timeline, the note’s start and end times set the angles of the two endpoints. The time between them determines their angular separation, while the visible length of the line depends on both the angles and the two radii.
+I convert each endpoint’s angle and radius into coordinates and join the two points with a straight line. The note’s duration determines the angular separation between the endpoints, while the visible line length depends on both the angles and the radii.
 
 Blue, orange and green distinguish the three voices. On each layer, gaps in the sequence of line starts show where that voice has fewer or no new note attacks. A note that is already sounding can still extend through that part of the timeline. Because the three drawings use the same time scale, a sparse passage in one voice can line up with activity in another when the layers are brought together. The open centre comes mainly from my decision to place the lines around a ring.
 
