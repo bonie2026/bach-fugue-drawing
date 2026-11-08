@@ -12,7 +12,7 @@ Saved exports and screenshots are identified below. A **re-render** was generate
 
 The first useful result was being able to inspect the notes. The V0 piano roll plots each MIDI note as a rectangle, with time across the page, pitch up the page and width equal to its duration. Its title explicitly identifies it as a track view of *Contrapunctus VII*. The V0 folder also contains a cut excerpt and a Py5canvas sketch. That separates the initial data experiment from the eventual choice of piece.
 
-For *Contrapunctus VIII*, the later diagnostic prints the number of MIDI instruments, the note count per instrument and a few example pitches and start/end times. This is the part I remember getting stuck on. I needed to see what Python was actually reading before I could decide which values would drive the drawing. The folder contains a MusicXML score and a separately named Simonetto MIDI. The scripts establish that I read the MIDI. The archive does not establish that I converted that score myself.
+For *Contrapunctus VIII*, the later diagnostic prints the number of MIDI instruments, the note count per instrument and a few example pitches and start/end times. This is the part I remember getting stuck on. I needed to see what Python was actually reading before I could decide which values would drive the drawing. The folder contains a MusicXML score and a separately named Simonetto MIDI. I downloaded the Simonetto MIDI file online and used it as the input for my Python sketches. I used pretty_midi to read the note data and map it to visual elements.
 
 Source: `code/v0/analyze_fugue.py`
 
@@ -338,17 +338,9 @@ Source: `code/v7/bach_v7_voice_1.py`
 
 *V7 test 5 · saved blue study for voice 3.*
 
-![Desktop V7 Voice 1 · fresh re-render from its own script and local MIDI.](assets/07-current-voice-1.png)
+![V7 combined drawing with all three voices in colour.](assets/bach_v7_combine.png)
 
-*Desktop V7 Voice 1 · fresh re-render from its own script and local MIDI.*
-
-![Desktop V7 Voice 2 · fresh re-render from its own script and local MIDI.](assets/07-current-voice-2.png)
-
-*Desktop V7 Voice 2 · fresh re-render from its own script and local MIDI.*
-
-![Desktop V7 Voice 3 · fresh re-render from its own script and local MIDI.](assets/07-current-voice-3.png)
-
-*Desktop V7 Voice 3 · fresh re-render from its own script and local MIDI.*
+*V7 final composition · The three voices overlap in one image, with a different colour for each voice.*
 
 ## 08 · A more literal radial comparison · V8 study
 
