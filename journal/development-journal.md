@@ -369,10 +369,6 @@ The hanging images below are AI-assisted design studies. They show mounting idea
 
 *AI concept mockup · freestanding frame.*
 
-![AI concept mockup · shallow wall mount.](assets/09-wall-mount.png)
-
-*AI concept mockup · shallow wall mount.*
-
 ## For the shorter assessment report
 
 Three representative figures: **(1)** MIDI note data beside the piano roll, **(2)** a V7 code-and-render comparison showing the move toward the shared time mapping, **(3)** the real translucent-paper test. Keep the final installed photograph separate. Use the journal as the fuller version record.
