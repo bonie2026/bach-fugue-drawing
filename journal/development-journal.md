@@ -326,18 +326,6 @@ Source: `code/v7/bach_v7_voice_1.py`
         line(x1, y1, x2, y2)
 ```
 
-![V7 test 5 · saved blue study for voice 1.](assets/07-saved-voice-1.png)
-
-*V7 test 5 · saved blue study for voice 1.*
-
-![V7 test 5 · saved blue study for voice 2.](assets/07-saved-voice-2.png)
-
-*V7 test 5 · saved blue study for voice 2.*
-
-![V7 test 5 · saved blue study for voice 3.](assets/07-saved-voice-3.png)
-
-*V7 test 5 · saved blue study for voice 3.*
-
 ![V7 combined drawing with all three voices in colour.](assets/bach_v7_combine.png)
 
 *V7 final composition · The three voices overlap in one image, with a different colour for each voice.*
