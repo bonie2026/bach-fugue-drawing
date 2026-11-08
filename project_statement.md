@@ -46,3 +46,4 @@ I developed the visual concept and created the generative drawings myself. I rec
 ## Reference
 
 - Denis Collins, “[Horizontal-Shifting Counterpoint and Parallel-Section Constructions in Contrapunctus 8 and 11 from J. S. Bach’s Art of Fugue](https://mtosmt.org/ojs/index.php/mto/article/view/103),” *Music Theory Online*, 24(4).
+- Sun, R. (2022) *The Art of Fugue, BWV 1080: Contrapunctus VIII [with analysis]* [YouTube video]. 22 May. Available at: https://www.youtube.com/watch?v=INKRUAEVRi0 (Accessed: 8 November 2026).
