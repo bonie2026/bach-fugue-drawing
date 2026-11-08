@@ -129,7 +129,7 @@ A more detailed acknowledgement is included in the [Project Statement](project_s
 
 **Music:** Johann Sebastian Bach, *Contrapunctus VIII*, from *The Art of Fugue*, BWV 1080.
 
-**MIDI:** An existing online MIDI transcription was used as source data. The original source and attribution should be included here.
+**MIDI:** Simonetto, A. G. (n.d.) *Contrapunctus VIII a 3*, from J. S. Bach’s *The Art of Fugue*, BWV 1080 [MIDI transcription]. Kunst der Fuge. Available at: https://www.kunstderfuge.com/bach/canons.htm (Accessed: 8 November 2026).
 
 **Research:** Collins, D. (2018). "Horizontal-Shifting Counterpoint and Parallel-Section Constructions in Contrapunctus 8 and 11 from J. S. Bach's Art of Fugue." *Music Theory Online*, 24(4).
 
