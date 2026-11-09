@@ -20,7 +20,7 @@ The three drawings can be viewed individually or combined into a single image.
 The physical installation is designed to present the drawings on separate sheets of translucent paper, suspended one behind another.
 
 <p align="center">
-  <img src="journal/assets/bach_v7_combine.png" width="600" alt="Art of Fugue – Three-Voice Combined Drawing">
+  <img src="journal/assets/Framed Abstract Floral Burst.png" width="600" alt="Art of Fugue – Three-Voice Combined Drawing">
 </p>
 
 ## Tools and Technologies
