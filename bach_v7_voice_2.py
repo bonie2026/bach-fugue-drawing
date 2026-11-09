@@ -22,10 +22,10 @@ def draw():
         angle = note.start / total_time * 360 - 90
         angle2 = note.end / total_time * 360 - 90
 
-        amplitude = 45 + (note.pitch - 60) * 2
+        amplitude = 50 + (note.pitch - 60) * 2
 
-        radius1 = 180 + amplitude * sin(radians(angle * 6))
-        radius2 = 180 + amplitude * cos(radians(angle * 10))
+        radius1 = 250 + amplitude * sin(radians(angle * 6))
+        radius2 = 250 + amplitude * cos(radians(angle * 10))
 
         x1 = 450 + radius1 * cos(radians(angle))
         y1 = 450 + radius1 * sin(radians(angle))
