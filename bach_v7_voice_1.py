@@ -14,7 +14,7 @@ def setup():
 
 def draw():
     background(250)
-    stroke(30, 90, 160)
+    stroke(0, 0, 139)
     stroke_weight(0.5)
 
     for note in notes:
@@ -22,10 +22,10 @@ def draw():
         angle = note.start / total_time * 360 - 90
         angle2 = note.end / total_time * 360 - 90
 
-        amplitude = 45 + (note.pitch - 60) * 2
+        amplitude = 150 + (note.pitch - 60) * 2
 
-        radius1 = 300 + amplitude * sin(radians(angle * 6))
-        radius2 = 300 + amplitude * cos(radians(angle * 10))
+        radius1 = 150 + amplitude * sin(radians(angle * 6))
+        radius2 = 150 + amplitude * cos(radians(angle * 10))
 
         x1 = 450 + radius1 * cos(radians(angle))
         y1 = 450 + radius1 * sin(radians(angle))
